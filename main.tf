@@ -12,8 +12,6 @@ module "compute" {
 
 module "database" {
   source = "./modules/database"
-
-  
   vpc_security_group_ids = [module.networking.securitygroupid]
   db_subnet_group_name = module.networking.dbsubnetgroupname
   depends_on = [ module.networking, module.compute ]

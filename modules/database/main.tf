@@ -8,6 +8,8 @@ resource "aws_db_instance" "postgres" {
   username             = "testdb"
   password             = "8characters"
   skip_final_snapshot = true
+  vpc_security_group_ids = var.vpc_security_group_ids
+  db_subnet_group_name = var.db_subnet_group_name
   //security_group_names = [module.networking.securitygroupname]
   //db_subnet_group_name = module.networking.dbsubnetgroupname
 
