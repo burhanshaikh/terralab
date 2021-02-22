@@ -11,7 +11,9 @@ variable "instance_type" {
 
 variable "subnet_id" {
   type = string
+  description = "ID of the subnet in which EC2 instance is to be deployed"
 }
 
 variable "vpc_security_group_ids" {
+  description = "ID of the security group to be attached to the EC2 Instance"
 }
